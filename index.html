@@ -3,156 +3,121 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio — Emmanuel</title>
+  <title>Emmanuel — Frontend Developer</title>
+  <meta name="description" content="Frontend developer from Lagos building clean, fast digital experiences.">
+  <link rel="stylesheet" href="./main.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="./main.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&family=Syne:wght@700;800&display=swap" rel="stylesheet">
   <style>
-  
+
   </style>
 </head>
 <body>
-<!-- Replace the nav-content div with this -->
+  <canvas id="bg-canvas"></canvas>
 
-<div class="container nav-content">
-  <div class="logo">E<span>M</span></div>
-
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-
-  <div class="nav-links" id="navLinks">
-    <a href="#hero" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </div>
-</div>
-  <section id="hero">
+  <nav id="navbar">
     <div class="container">
-      <div class="hero-content">
-        <div class="greeting">HELLO, I'M</div>
-        <h1>Emmanuel<span class="highlight">.</span></h1>
-        <p class="subtitle">
-          I build clean, fast and thoughtful digital experiences with modern web technologies.
-        </p>
-        <div class="cta-group">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-outline">Get in Touch</a>
+      <div class="nav-inner">
+        <a href="#hero" class="logo">E<em>M</em></a>
+
+        <div class="hamburger" id="hamburger" aria-label="Toggle menu" role="button" tabindex="0">
+          <span></span><span></span><span></span>
+        </div>
+
+        <ul class="nav-links" id="navLinks" role="list">
+          <li><a href="#hero" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <!-- ─── Hero ─── -->
+    <section id="hero">
+      <div class="container">
+        <div class="hero-content reveal">
+          <span class="greeting">Hello, I'm</span>
+          <h1>
+            <span class="name-line">Emmanuel<span class="accent-dot">.</span></span>
+          </h1>
+          <p class="subtitle">
+            I build clean, fast and thoughtful digital experiences with modern web technologies.
+          </p>
+          <div class="cta-group">
+            <a href="#projects" class="btn btn-primary">View Projects →</a>
+            <a href="#contact" class="btn btn-outline">Get in Touch</a>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+      <div class="scroll-cue" aria-hidden="true">Scroll</div>
+    </section>
 
-  <section id="about">
-    <div class="container">
-      <h2>About <span>Me</span></h2>
-      <div class="grid-2">
-        <div class="about-text">
-          <p>I'm a frontend-focused developer from Lagos who enjoys turning complex problems into elegant, intuitive interfaces.</p>
-          <p>I care about performance, accessibility, clean code structure and creating experiences that feel good to use.</p>
-          <p>Currently exploring motion design, 3D on the web and design systems architecture.</p>
+    <!-- ─── About ─── -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Who I am</span>
+          <h2>About Me</h2>
         </div>
-        <div class="file" style="background:#222; height:380px; border-radius:50px; border:1px solid var(--gray); display:flex; align-items:center; justify-content:center; color:#555; font-size:1.1rem;">
-          <img src="./images/hl2.jpg" alt="">
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>I'm a frontend-focused developer from Rivers state Nigeria who enjoys turning complex problems into elegant, intuitive interfaces.</p>
+            <p>I care about performance, accessibility, clean code and creating experiences that feel good to use — not just look good.</p>
+            <p>Currently exploring motion design, 3D on the web and design systems architecture.</p>
+            <div class="stat-row">
+              <div class="stat">
+                <strong>3+</strong>
+                <span>Years experience</span>
+              </div>
+              
+              <div class="stat">
+                <strong>20+</strong>
+                <span>Projects shipped</span>
+              </div>
+              <div class="stat">
+                <strong>∞</strong>
+                <span>Coffee consumed</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-image reveal">
+            <img src="./images/hl2.jpg" alt="Emmanuel — Frontend Developer">
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="skills" style="background:var(--bg2);">
-    <div class="container">
-      <h2>My <span>Skills</span></h2>
-      <div class="skills-grid">
-        <div class="skill-item"><span>⚡</span> JavaScript</div>
-        <div class="skill-item"><span>⚛</span> React</div>
-        <div class="skill-item"><span>🎨</span> Tailwind CSS</div>
-        <div class="skill-item"><span>📱</span> Responsive Design</div>
-        <div class="skill-item"><span>🟦</span> TypeScript</div>
-        <div class="skill-item"><span>GSAP</span> Animation</div>
-        <div class="skill-item"><span>🖼</span> Figma</div>
-        <div class="skill-item"><span>⚙</span> Git / GitHub</div>
+    <!-- ─── Skills ─── -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">What I work with</span>
+          <h2>My Skills</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-item"><span class="skill-icon">⚡</span><p>JavaScript</p></div>
+          <div class="skill-item"><span class="skill-icon">⚛</span><p>React</p></div>
+          <div class="skill-item"><span class="skill-icon">🎨</span><p>Tailwind CSS</p></div>
+          <div class="skill-item"><span class="skill-icon">📱</span><p>Responsive Design</p></div>
+          <div class="skill-item"><span class="skill-icon">🟦</span><p>TypeScript</p></div>
+          <div class="skill-item"><span class="skill-icon">🖼</span><p>Figma</p></div>
+          <div class="skill-item"><span class="skill-icon">⚙</span><p>Git / GitHub</p></div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <section id="projects">
-    <div class="container">
-      <h2>Selected <span>Projects</span></h2>
-      <div class="projects-grid">
-        <a href="#" class="project-card">
-          <div class="project-img"><img src="./images/Image (5).png" alt=""></div>
-          <div class="project-body">
-            <h3>Modern Dashboard UI</h3>
-            <p>React • TypeScript • Tailwind • Chart.js</p>
-            <div class="project-tags">
-              <span class="tag">React</span>
-              <span class="tag">Dashboard</span>
-              <span class="tag">2025</span>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="project-card">
-          <div class="project-img"><img src="./images/Image.png" alt=""></div>
-          <div class="project-body">
-            <h3>3D Product Viewer</h3>
-            <p>Three.js • React Three Fiber • GSAP</p>
-            <div class="project-tags">
-              <span class="tag">Three.js</span>
-              <span class="tag">3D</span>
-              <span class="tag">2025</span>
-            </div>
-          </div>
-        </a>
-        <a href="#" class="project-card">
-          <div class="project-img"><img src="./images/hl4.jpeg" alt=""></div>
-          <div class="project-body">
-            <h3>Minimal Blog Platform</h3>
-            <p>Next.js • MDX • Vercel • Tailwind</p>
-            <div class="project-tags">
-              <span class="tag">Next.js</span>
-              <span class="tag">Blog</span>
-              <span class="tag">2024</span>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="container">
-      <h2>Let's <span>Connect</span></h2>
-      <p style="font-size:1.3rem; color:var(--text2); max-width:600px; margin:0 auto 2.5rem; text-align:center;">
-        I'm currently open to interesting opportunities and collaborations.<br>
-        Feel free to reach out — I'd love to hear from you.
-      </p>
-
-      <div style="text-align:center; font-size:1.4rem; margin:2rem 0;">
-        <a href="mailto:hello@emmanuel.dev" style="color:var(--accent); border-bottom:1px solid var(--accent); padding-bottom:4px;">
-          hello@emmanuel.dev
-        </a>
-      </div>
-
-      <div class="contact-links">
-        <a href="#">GitHub</a>
-        <a href="#">LinkedIn</a>
-        <a href="#">Twitter / X</a>
-        <a href="#">Instagram</a>
-      </div>
-    </div>
-  </section>
+    <!-- ─── Projects ─── -->
+    
+  
 
   <footer>
     <div class="container">
-      © 2025 Emmanuel — Built with vanilla HTML, CSS, JavaScript & GSAP
+      <p>Designed & built by Emmanuel &nbsp;·&nbsp; <span id="year"></span></p>
     </div>
   </footer>
 
